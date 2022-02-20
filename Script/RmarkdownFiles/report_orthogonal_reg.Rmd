@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 library(boot)
 
-source("CodingTest/OrthoReg.R")
+source(here::here("Script/Functions/OrthoReg.R"))
 
 ```
 
@@ -25,6 +25,11 @@ source("CodingTest/OrthoReg.R")
 ## R Markdown
 
 ```{r cars}
+
+var(x)
+
+var(y) / var(x)
+
 x <- rnorm(1000, 130, 30)
 
 res <- rnorm(length(x), 0, 20)
