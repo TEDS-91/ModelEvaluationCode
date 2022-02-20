@@ -1,0 +1,37 @@
+---
+title: "ReportOthogReg"
+author: "Tadeu E da Silva"
+date: "19/02/2022"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+```{r}
+
+library(boot)
+
+source("CodingTest/OrthoReg.R")
+
+```
+
+
+## R Markdown
+
+```{r cars}
+x <- rnorm(1000, 130, 30)
+
+res <- rnorm(length(x), 0, 20)
+
+y <- x * 0.7 + 20 + res
+
+ortho_reg(y, x, 1)
+
+```
+
