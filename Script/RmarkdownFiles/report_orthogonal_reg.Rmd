@@ -26,17 +26,15 @@ source(here::here("Script/Functions/OrthoReg.R"))
 
 ```{r cars}
 
-var(x)
-
-var(y) / var(x)
-
 x <- rnorm(1000, 130, 30)
 
 res <- rnorm(length(x), 0, 20)
 
 y <- x * 0.7 + 20 + res
 
-ortho_reg(y, x, 1)
+ortho_reg(y, x, 5)
+
+
 
 ```
 

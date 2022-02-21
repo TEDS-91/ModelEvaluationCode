@@ -38,9 +38,9 @@ ortho_reg <- function(y, x, alpha)
   
   o <- atan(beta_1)
   
-  if(alpha > 1) alpha <- alpha / 100
+  alpha <- alpha / 100
   
-  t <- asin(sqrt(dchisq(0.05, 1) / ((n - 1) * (l1 / l2 + l2 / l1 - 2))))
+  t <- asin(sqrt(dchisq(alpha, 1) / ((n - 1) * (l1 / l2 + l2 / l1 - 2))))
   
   lci_beta_1 <- tan(o - t)
   
